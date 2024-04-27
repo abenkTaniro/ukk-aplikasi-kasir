@@ -19,4 +19,5 @@ Route::resource('pelanggan',PelangganController::class);
 Route::resource('kasir',KasirController::class);
 
 Route::get('transaksi',[TransaksiController::class,'index'])->name('transaksi.index');
-Route::post('transaksi/store',[TransaksiController::class,'index'])->name('transaksi.store');
+Route::post('transaksi/store',[TransaksiController::class,'store'])->name('transaksi.store');
+Route::delete('transaksi/{id}',[TransaksiController::class,'destroy'])->name('transaksi.destroy');

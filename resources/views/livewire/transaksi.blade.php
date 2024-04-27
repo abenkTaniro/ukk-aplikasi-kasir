@@ -91,7 +91,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Jumlah</th>
+                                    {{-- <th>Jumlah</th> --}}
                                     <th>Harga</th>
                                     <th>Stok</th>
                                     <th></th>
@@ -113,15 +113,15 @@
                                                 @endfor
                                             </td>
                                             <td>{{ $item->nama }}</td>
-                                            <td class="col-2">
-                                                <input type="text" class="form-control" name="jumlah"
-                                                    value="1">
-                                            </td>
+                                            {{-- <td class="col-2">
+                                                <input type="text" class="form-control" wire:model="jumlah" value="1">
+                                            </td> --}}
                                             <td>Rp. {{ $item->harga }}</td>
                                             <td>{{ $item->stok }}</td>
                                             <td class="col-2">
                                                 <div class="d-flex justify-content gap-1">
-                                                    <button class="btn btn-warning btn-sm py-2 px-3 rounded-1" wire:click="addCart({{$item->id}})" >
+                                                    <button class="btn btn-warning btn-sm py-2 px-3 rounded-1"
+                                                        wire:click="addCart({{ $item->id }})">
                                                         <i class="bx bx-plus"></i>
                                                     </button>
                                                 </div>
